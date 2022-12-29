@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
+
+<script>
+  var information = {{ data | tojson }}
+  // console.log(information)
+</script>
+
+<body>
+  <div class="container">
+    <h1 class="homepage-title">Learn from scratch →</h1>
+    <div class="homepage-btn">
+      <button id="learn" value="submit" class="btn btn-primary goButton">START LEARNING!</button>
+    </div>
+    <h3 class="subtitle grey"> or click on any knife to learn more. </h3>
+    <div id="knifeRow">
+      <!-- <a href="/learn/1"><input type="image" class="knifeRowImg" src='../static/imgs/butter_knife.png' alt="Butter Knife" /></a> -->
+    </div>
+
+    <!-- <img id="homeImg" src="static/imgs/main.png" alt="Multiple Knives Image"> -->
+    <!-- <div class="">
+        <button id="learn" value="submit" class="btn btn-outline-dark goButton">Learn Here</button>
+    </div> -->
+
+  </div>
+</body>
+
+{% endblock content%}

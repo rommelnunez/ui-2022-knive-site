@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- <script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'frontpage.js') }}"></script>
+
+<script>
+  var information = {{ data | tojson }}
+  // console.log(information)
+</script>
+
+<body>
+
+<script type= "text/javascript" src="{{ url_for('static', filename = 'frontpage.js') }}"> </script>
+<div class="frontpage-container">
+  <div>
+    <h1 class="frontpage-title hammersmith grey"> WHICH KNIFE SHOULD I USE? </h1>
+  </div>
+  <div class="frontpage-button">
+            <button id="learn" value="submit" class="btn btn-outline-dark goButton">Learn Here</button>
+  </div>
+</div>
+
+
+
+</body> -->
+
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'frontpage.js') }}"></script>
+
+<script>
+  var information = {{ data | tojson }}
+  // console.log(information)
+</script>
+
+  <div class="frontpage-container">
+    <div>
+      <h1 class="frontpage-title hammersmith dark-grey"> WHICH KNIFE SHOULD I USE? </h1>
+      <h3 class="explore grey"> <em>Explore this website to maximize your kitchen skills and accurately pick up the right knife to use on anything from peeling to cutting vegetables, to preparing meat!</em> </h3>
+    </div>
+        <button value="submit" class="btn btn-primary frontpage-button">LEARN HERE</button>
+    <div class="storeView"> </div>
+
+            <img class="frontpage-img" src="static/imgs/front-page.png" alt="Front Page">
+  </div>
+
+
+{% endblock %}
